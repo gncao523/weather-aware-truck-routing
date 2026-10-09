@@ -1,0 +1,25 @@
+# Python
+__pycache__/
+*.pyc
+.venv/
+backend/staticfiles/
+
+# Node
+node_modules/
+frontend/dist/
+
+# Env / editors
+.env
+.env.*
+.vscode/
+.idea/
+.DS_Store
+
+# Assessment brief (not part of the app)
+/fs-assessment-spotter.pdf
+/requirements.txt
+*.tsbuildinfo
+
+# Playwright output
+frontend/test-results/
+frontend/playwright-report/

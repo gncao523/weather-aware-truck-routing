@@ -1,0 +1,15 @@
+# Render Blueprint: New → Blueprint → pick this repo. One Docker web service
+# serves both the API (/api/*) and the built React app.
+services:
+  - type: web
+    name: weather-aware-truck-routing
+    runtime: docker
+    plan: free
+    healthCheckPath: /api/health/
+    envVars:
+      - key: DJANGO_SECRET_KEY
+        generateValue: true
+      - key: DJANGO_ALLOWED_HOSTS
+        value: .onrender.com
+      - key: TRUCK_MAX_SPEED_MPH
+        value: "65"
